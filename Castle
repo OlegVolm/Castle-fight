@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Castel</title>
+</head>
+<body>
+<script>
+  var userName = prompt("Welcome to the Castel! What is your name sir?");
+var enterCastel = prompt(userName + " " + "would you like to come in?");
+if (enterCastel === "no") {
+  window.alert("Too bad.Enjoy the rest of your day!");
+} else {
+  var lightOn = prompt("Isn't it too dark inside?");
+  if (lightOn === "yes") {
+    var playerChoice = prompt("Turn on the lights and choose the weapon: AK47,sword or knife");
+  } else {
+    var playerChoice = prompt("Good, please choose the weapon:AK47,sword or knife");
+  }
+}
+var computerChoice = Math.random();
+if (computerChoice < 0.34) {
+  computerChoice = "AK47";
+} else if (computerChoice <= 0.67) {
+  computerChoice = "sword";
+} else {
+  computerChoice = "knife";
+}
+window.alert("Your enemy choice is" + " " + computerChoice);
+
+function fight(choice1, choice2) {
+  if (choice1 === choice2) {
+    return "Where is my popcorn, I can watch it for hours...";
+  } else if (choice1 === "AK47") {
+    if (choice2 === "sward") {
+      return "You won!!!";
+    } else {
+      return "You won!!!";
+    }
+  } else if (choice1 === "sword") {
+    if (choice2 === "AK47") {
+      return "You lost!";
+    } else {
+      return "You won!";
+    }
+  } else if (choice1 === "knife") {
+    return "You lost!";
+  }
+}
+
+window.alert(fight(playerChoice, computerChoice));
+    
+  </script>
+</body>
+</html>
